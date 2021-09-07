@@ -23,6 +23,7 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -43,8 +44,8 @@
           <h2>Your Name</h2>
         </div>
       </div>
-      
-  </header>
+    
+    </header>
 
     <!-- Page-specific (main) content here -->
    
@@ -59,11 +60,10 @@
       
             <div class="input">
               <button type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
+              <output id="charNum" name="counter" class="counter" for="tweet-text">140</output>
             </div>
           </form>
         </section>
-
        </main>
   
   </body>
