@@ -1,0 +1,39 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  top: 0;
+  /* font-family: 'Bungee', cursive;  */
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 35px;
+  display:flex;
+  justify-content:  space-between;
+  align-items: center;
+  position: fixed;
+ 
+}
+
+ .tweeter{
+  font-size:  1.5em;
+  display:flex;
+  font-family: 'Bungee', cursive; 
+}
+
+.text {
+  display:flex;
+  font-family: 'Source Sans Pro', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+
+.fa-angle-double-down{
+  color :red;
+
+}
+
+
+

@@ -1,0 +1,23 @@
+header {
+  height: 400px;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  margin-top: 120px;
+  background-color: #bf7739;
+  background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+}
+
+.image{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.name{
+padding-top: 0;
+}
+
+
