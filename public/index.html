@@ -5,6 +5,8 @@
     <title>Tweeter - Home Page</title>
     <!-- Awesome Fonts link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+   
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -22,11 +24,12 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <script type="text/javascript" src="/scripts/userInfo.js"></script>
 
 
   </head>
@@ -69,13 +72,13 @@
             </div>
           </form>
         </section>
-        
-        <article>
+
+
+        <article class ="tweets-container">
           <header class="userInfo">
               <img class="photo" src="https://i.imgur.com/nlhLi3I.png ">
-            
               <div class="userName">
-              <span>Eva Prokh </span>
+              <span class="userN">Eva Prokh </span>
               <span class="nickName">@EvaProk  </span>
             </div>
           </header>
@@ -83,17 +86,19 @@
             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
             <hr>
           </div>
+
           <footer class="tweetFooter">
             <span class="date">10 days ago</span>
             <div> 
               <i class="fas fa-flag"></i>
               <i class="fas fa-heart"></i>
               <i class="fas fa-retweet"></i>
-            </div>
-            
+            </div> 
           </footer>
 
         </article>
+
+        
         
 
        </main>
