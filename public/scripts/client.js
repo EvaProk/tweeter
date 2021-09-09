@@ -1,10 +1,14 @@
 
 $(() => {
-  
+
+$( ".errorMessage" ).hide(); // Hides the errorMessage Div
+
+// loadTweets();
+
+
 
 const renderTweets = function(tweets) {
   const $newTweet = $('.userTweets');
-  //$newTweet.empty();
     for(const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
 
@@ -48,24 +52,29 @@ const createTweetElement = (data) =>{
 const $form = $('#new-tweet');
   $form.on('submit', function(event) {
     event.preventDefault();
-    console.log('the form has been submitted')
+
     if($('#tweet-text').val() == ""){   // Checks if the form is empty, or not too long
-        alert("empty");
+         $( ".errorMessage" ).slideDown();
+         $( ".errorText" ).text("Empty")
         return
       } else if($('#tweet-text').val().length >= 140){
-        alert("too many characters")
+        $( ".errorMessage" ).slideDown();
+        $( ".errorText" ).text("Too long")
         return
+      } else{
+        $( ".errorMessage" ).hide();
       }
 
     const serializedData = $(this).serialize() 
     console.log(serializedData);
-    // Validation form???? 
     
     $.post('/tweets', serializedData, (response) => {
       console.log(response)
       
       loadTweets();
       $(this)[0].reset(); // cleans the form after submission
+      $("#charNum").text(140);
+
     })
 
   })
@@ -90,7 +99,7 @@ const $form = $('#new-tweet');
     })
   }
 
-  renderTweets();
+  loadTweets();
 
 
 

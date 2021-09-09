@@ -56,7 +56,9 @@ hr {
   size: 0.7em;
   color: darkblue;
 }
-.fas:hover{
+.fa-flag:hover, 
+.fa-heart:hover,
+.fa-retweet:hover{
   color: olivedrab;
 }
 

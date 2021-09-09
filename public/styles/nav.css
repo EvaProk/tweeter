@@ -30,9 +30,23 @@ nav {
 }
 
 
-.fas.fa-angle-double-down{
+.fas.fa-angle-double-down,
+.fas.fa-exclamation {
   color :red;
+  animation: bounce 2s infinite;
 
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-7px);
+  }
+  60% {
+    transform: translateY(-7px);
+  }
 }
 
 

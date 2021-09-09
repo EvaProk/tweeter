@@ -41,4 +41,16 @@ output{
   font-family: 'Bungee', cursive;
 }
 
+.errorMessage{
+  border: 5px solid red;
+  width:90%;
+  margin-right:5%;
+  margin-left:5%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  color:red;
+}
 
