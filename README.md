@@ -26,10 +26,8 @@ When a user submits an invalid tweet (the tweet textarea is empty or contains mo
 6. The design of the App is adapted to Mobile and Large screens.
 
 ## Final Product
-<!-- !["Login Page"](https://github.com/EvaProk/tinyapp/blob/feature/user-registration/docs/Login-page.png%20.png) -->
-
-
-
+!["Main Page(Large Screen)"](https://github.com/EvaProk/tweeter/blob/master/docs/largeScreen.png)
+!["Main Page(Small Screen)"](https://github.com/EvaProk/tweeter/blob/master/docs/smallScreen.png)
 
 ## Getting Started
 
