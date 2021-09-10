@@ -1,8 +1,35 @@
 # Tweeter Project
+Tweeter is a simple, single-page Twitter clone created  using HTML, CSS, JS, jQuery and AJAX. The app contains a form for submitting tweets, which itself contains:
+- a textarea for new tweet content
+- a left-aligned button for submitting new tweets
+- contains a Character Counter, right-aligned, which by default shows 140 characters.
+Contains a ist of Tweets that displays tweets in reverse-chronological order . 
+Individual Tweets have a:
+ 1. Header, which contains the user's:
+     - avatar, on the left
+     - name, on the left and after the avatar
+     - handle, on the right
+     - body, which contains the tweet text
+     - footer, which displays:
+     - how long ago the tweet was created, on the left
+     - "Flag", "Re-tweet" and "Like" action icons on the right. (When the user hovers over an icon  the icon changes colour.)
+ 2. Character Counter
+When a user types into the Compose Tweet textarea, the Character Counter is updated to show how many characters a user may still type (subtracting the number of characters they've typed from the maximum allowable character count of 140)
 
-Tweeter is a simple, single-page Twitter clone.
+3. The Character Counter turns red when more than 140 characters have been typed into the Compose Tweet textarea, and it shows how many characters over the 140 limit have been typed (using a negative number)
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+4. Compose Tweet
+When a user submits an invalid tweet (the tweet textarea is empty or contains more than 140 characters), an appropriate error message is displayed
+
+5. When a user submits a valid tweet, the list of tweets is refreshed (displaying the new tweet), the Compose Tweet textarea is cleared, and the Character Counter is reset (to 140)
+
+6. The design of the App is adapted to Mobile and Large screens.
+
+## Final Product
+<!-- !["Login Page"](https://github.com/EvaProk/tinyapp/blob/feature/user-registration/docs/Login-page.png%20.png) -->
+
+
+
 
 ## Getting Started
 
@@ -13,5 +40,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+- body-parser
+- chance
+- express
+- md5
+- timeago.js
