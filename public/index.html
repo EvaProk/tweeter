@@ -30,90 +30,48 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
-
   </head>
-
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Navbar -->
     <nav>
       <span class="tweeter">tweeter</span>
       <span class="text "> <div><strong>Write  </strong>a new tweet
          </div><i class="fas fa-angle-double-down"></i> </span> 
     </nav>
-
+<!-- header -->
     <header class="mainHeader">
       <div class=image>
         <div>
           <img src="/images/profile-hex.png">
         </div>
-        <br>
         <div class="name">
-          <h2>Your Name</h2>
+          <span><b> Your</b> Name</span>
         </div>
       </div>
-    
     </header>
-
     <!-- Page-specific (main) content here -->
-    
-      <div class="errorMessage">
-      <i class="fas fa-exclamation"></i>
-      <p class="errorText"></p> 
-      <i class="fas fa-exclamation"></i>
-      </div>
-   
-    
-   
+    <!-- error section(hidden) -->
       <main class="container">
+        <div class="errorMessage">
+          <i class="fas fa-exclamation"></i>
+          <p class="errorText"></p>
+          <i class="fas fa-exclamation"></i>
+        </div>
+      <!-- New tweets form -->
         <section class="new-tweet">
-          
           <form action="/tweets" method="POST" id="new-tweet">
             <div>
               <label for="tweet-text">What are you humming about?</label>
               <textarea name="text" id="tweet-text"></textarea>
             </div>
-      
             <div class="input">
               <button type="submit">Tweet</button>
               <output id="charNum" name="counter" class="counter" for="tweet-text">140</output>
             </div>
           </form>
         </section>
-
-        <div class ="userTweets">
-          
-        </div>
-
-
-        <!-- <article class ="tweets-container"> -->
-          <!-- <header class="userInfo">
-              <img class="photo" src="https://i.imgur.com/nlhLi3I.png ">
-              <div class="userName">
-              <span class="userN">Eva Prokh </span>
-              <span class="nickName">@EvaProk  </span>
-            </div>
-          </header>
-          <div class="mainContent">
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-            <hr>
-          </div>
-
-          <footer class="tweetFooter">
-            <span class="date">10 days ago</span>
-            <div> 
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-heart"></i>
-              <i class="fas fa-retweet"></i>
-            </div> 
-          </footer> -->
-
-        <!-- </article> -->
-
-        
-        
-
-       </main>
-  
+      <!-- Old tweets swction -->
+        <div class="userTweets"></div>
+      </main>
   </body>
 </html>

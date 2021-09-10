@@ -37,7 +37,6 @@ img.photo{
 .nickName{
   color: lightgrey;
 }
- 
 
 .tweetFooter {
   display: flex;
@@ -61,6 +60,7 @@ hr {
 .fa-retweet:hover{
   color: olivedrab;
 }
+
 
 
 
