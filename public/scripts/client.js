@@ -5,14 +5,12 @@ $(() => {
 
   const renderTweets = function(tweets) {
     const $newTweet = $('.userTweets');
+    $newTweet.empty();   // Removes duplicate tweets on new submission
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-
       $newTweet.prepend($tweet);
     }
   };
-
-
 
   const createTweetElement = (data) => {
     return `<article class ="tweets-container">
@@ -23,12 +21,10 @@ $(() => {
       <span class="nickName">${data.user.handle} </span>
     </div>
   </header>
-
   <div class="mainContent">
     <p> ${escape(data.content.text)} </p>
     <hr>
   </div>
-
   <footer class="tweetFooter">
     <span class="date">${timeago.format(data.created_at)}</span>
     <div> 
@@ -37,7 +33,6 @@ $(() => {
       <i class="fas fa-retweet"></i>
     </div> 
   </footer>
-
 </article>`;
 
   };
@@ -48,13 +43,9 @@ $(() => {
     return div.innerHTML;
   };
 
-
-
-
   const $form = $('#new-tweet');
   $form.on('submit', function(event) {
     event.preventDefault();
-
     if ($('#tweet-text').val() == "") {   // Checks if the form is empty, or not too long
       $(".errorMessage").slideDown();
       $(".errorText").text("Empty");
@@ -68,42 +59,29 @@ $(() => {
     }
 
     const serializedData = $(this).serialize();
-    console.log(serializedData);
 
     $.post('/tweets', serializedData, (response) => {
       console.log(response);
-
       loadTweets();
-
       $(this)[0].reset(); // cleans the form after submission
       $("#charNum").text(140); // resets the count number
-
     });
-
   });
 
-
-
   const loadTweets = () => {
-
     $.ajax({
       url: '/tweets',
       method: 'GET',
       dataType: 'json',
       success: (tweets) => {
-        console.log("tweets", tweets);
-
         renderTweets(tweets);
-
       },
       error: (err) => {
         console.log(`errro: ${err}`);
       }
     });
   };
-
   loadTweets();
-
 });
 
 
