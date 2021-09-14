@@ -1,4 +1,3 @@
-
 $(() => {
 
   $(".errorMessage").hide(); // Hides the errorMessage Div
@@ -34,7 +33,6 @@ $(() => {
     </div> 
   </footer>
 </article>`;
-
   };
 
   const escape = function(str) {
@@ -61,7 +59,6 @@ $(() => {
     const serializedData = $(this).serialize();
 
     $.post('/tweets', serializedData, (response) => {
-      console.log(response);
       loadTweets();
       $(this)[0].reset(); // cleans the form after submission
       $("#charNum").text(140); // resets the count number
